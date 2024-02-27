@@ -1,0 +1,111 @@
+:root {
+    /* PRIMARY */
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+    background-color: var(--eggshell);
+    color: var(--dark-charcoal);
+    display: grid;
+    place-items: center;
+
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+}
+
+.recipe-container {
+    background-color: var(--white);
+    border-radius: 20px;
+    width: 40%;    
+    padding: 25px;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.preparation-time-container {
+    background-color: var(--rose-white);
+    padding: 10px;
+}
+
+.prep {
+    color: var(--dark-raspberry);
+    font-size: large;
+    margin-left: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.primary {
+    color: var(--nutmeg);
+}
+
+.instructions {
+    list-style: none;
+    counter-reset: item;
+}
+
+.instructions li {
+    counter-increment: item;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.instructions li:before {
+    content: counter(item) ". ";
+    color: var(--nutmeg);
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: -30px;
+}
+
+.lines {
+    line-height: 1.7;
+    margin-left: -15px;
+}
+
+h1,
+h2 {
+    font-family: "Young Serif";
+}
+
+h2 {
+    color: var(--nutmeg);
+}
+
+p {
+    font-size: 16px;
+}
+
+hr {
+    color: var(--light-grey);
+    background-color: var(--light-grey);
+    height: 1px;
+    border: 0;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    border-bottom: 1px solid var(--light-grey);
+    line-height: 2;
+}
+
+.no-border {
+    border: none;
+}
