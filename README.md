@@ -22,12 +22,12 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 ![](./screenshot.jpg)
 
 ### Screenshot Mobile
-![](./screenshot_mobile_.jpg)
+![](./screenshot_mobile.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/theGamingKitten/recipe-page-main
+- Live Site URL: https://thegamingkitten.github.io/recipe-page-main/
 
 ## My process
 
@@ -35,33 +35,38 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
 - CSS Grid
+- Media Queries
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This was the code I used to style the numbers in front of the instructions. Not sure from which tutorial this was.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.instructions {
+    list-style: none;
+    counter-reset: item;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+.instructions li {
+    counter-increment: item;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.instructions li:before {
+    content: counter(item) ". ";
+    color: var(--nutmeg);
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: -30px;
 }
 ```
 
 ### Continued development
 
-In future projects I want to focus more on making the site look good on various screen sizes.
+In future projects I want to focus more on making the site look good on various screen sizes. Or even try a mobile-first approach.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@theGamingKitten](https://www.frontendmentor.io/profile/theGamingKitten)

@@ -109,3 +109,20 @@ td {
 .no-border {
     border: none;
 }
+
+@media (max-width: 375px) {
+    body {
+        background-color: var(--white);
+    }
+    .recipe-container {
+        width: 90%;
+        height: auto;
+        margin-top: 125px;
+    }
+    img {
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+}
