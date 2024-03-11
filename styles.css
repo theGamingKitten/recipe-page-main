@@ -16,38 +16,45 @@ body {
     color: var(--dark-charcoal);
     display: grid;
     place-items: center;
+    min-height: 100vh;
 
     font-family: "Outfit", sans-serif;
     font-weight: 400;
+    font-size: 16px;
 }
 
 .recipe-container {
     background-color: var(--white);
     border-radius: 20px;
-    width: 40%;    
-    padding: 25px;
-    margin: 0 auto;
+    width: 50%;    
+    padding: 35px;
+    margin: 75px auto;
 }
 
 img {
     width: 100%;
     display: block;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 .preparation-time-container {
     background-color: var(--rose-white);
     padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .prep {
     color: var(--dark-raspberry);
-    font-size: large;
+    font-size: 1.2rem;
+    font-weight: 600;
     margin-left: 10px;
+    font-family: "Outfit";
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .primary {
@@ -68,27 +75,29 @@ img {
 .instructions li:before {
     content: counter(item) ". ";
     color: var(--nutmeg);
-    font-weight: bold;
+    font-weight: 700;
     margin-right: 10px;
     margin-left: -30px;
 }
 
 .lines {
     line-height: 1.7;
-    margin-left: -15px;
+    margin-left: -10px;
+}
+
+.lines > li > span {
+    margin-left: 15px;
 }
 
 h1,
 h2 {
     font-family: "Young Serif";
+    font-weight: 400;
 }
 
 h2 {
     color: var(--nutmeg);
-}
-
-p {
-    font-size: 16px;
+    font-size: 1.7rem;
 }
 
 hr {
@@ -96,6 +105,7 @@ hr {
     background-color: var(--light-grey);
     height: 1px;
     border: 0;
+    margin: 35px 0;
 }
 
 table {
@@ -107,6 +117,10 @@ td {
     line-height: 2;
 }
 
+td > span {
+    margin-left: 25px;
+}
+
 .no-border {
     border: none;
 }
@@ -114,11 +128,12 @@ td {
 @media (max-width: 375px) {
     body {
         background-color: var(--white);
+        font-size: 0.9rem;
     }
     .recipe-container {
-        width: 90%;
-        height: auto;
+        width: 80%;
         margin-top: 125px;
+        margin-bottom: -15px;
     }
     img {
         width: 100%;
